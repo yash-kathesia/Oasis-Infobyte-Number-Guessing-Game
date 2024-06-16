@@ -17,20 +17,19 @@ public class NumberGuessingGame {
         System.out.println("===> WELCOME TO NUMBER GUESSING GAME <===");
         System.out.printf("Guess the number between %d and %d in %d attempts.\n", MIN_RANGE, MAX_RANGE, MAX_ATTEMPTS);
         while (randomNumber != num) {
-            System.out.println(randomNumber);
             System.out.print("Enter a Random Number : ");
             num = sc.nextInt();
             attempt = attempt + 1;
             if (num == randomNumber) {
-                int score = MAX_ATTEMPTS - attempt;
+                int score = (MAX_ATTEMPTS - attempt);
                 totalScore = totalScore + score;
                 System.out.println("Guess Number is Equals to Random number. You Won...!!!");
                 System.out.printf("Attempts : %d & Score : %d\n", attempt, totalScore);
                 break;
             } else if (num < randomNumber) {
-                System.out.printf("Number is Greater then %d & Attempts Left : %d.\n", num, MAX_ATTEMPTS - attempt);
+                System.out.printf("Number is Greater then %d & Attempts Left : %d.\n", num, (MAX_ATTEMPTS - attempt));
             } else {
-                System.out.printf("Number is Less then %d & Attempts Left : \n", num, MAX_ATTEMPTS - attempt);
+                System.out.printf("Number is Less then %d & Attempts Left : %d\n", num, (MAX_ATTEMPTS - attempt));
             }
             if (attempt == MAX_ATTEMPTS) {
                 System.out.println("Attempt Left : 0");
